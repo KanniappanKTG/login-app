@@ -11,7 +11,7 @@ class Login extends React.Component {
 
   showPopup(){
     var obj = this.state;
-    fetch('http://localhost:8080/auth/', {
+    fetch('http://10.100.109.184:85/auth/', {
         method: 'post',
         headers: {
           'Accept': 'application/json',
@@ -35,7 +35,7 @@ class Login extends React.Component {
           }
        }).catch(err => {
         Swal.fire({
-          type: 'warning  ',
+          type: 'warning',
           title: 'Unable to connect the Server',
         })
        });
